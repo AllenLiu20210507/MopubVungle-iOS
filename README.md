@@ -1,2 +1,2 @@
-# MopubVungle-iOS
- This is a MopubVungle demo
+# Mopub-Vungle-iOS
+ This is a demo about how to integrate Vungle through Mopub
