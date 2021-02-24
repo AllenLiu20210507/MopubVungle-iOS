@@ -8,7 +8,7 @@ target 'MopubVungle-iOS' do
   # use_frameworks!
 
   # Pods for MopubVungle-iOS
-    pod 'MoPub-Vungle-Adapters', '6.8.1.3'
+    pod 'MoPub-Vungle-Adapters', '6.9.1.1'
     pod 'mopub-ios-sdk'
 
   target 'MopubVungle-iOSTests' do
