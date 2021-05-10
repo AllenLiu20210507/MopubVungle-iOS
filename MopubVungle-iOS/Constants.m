@@ -10,7 +10,7 @@
 @implementation Constants
 
 NSString* const adUnitId = @"";
-NSString* const interstitialPlacement = @"4d20f7a67ded4660a79d00f9f702488c";
+NSString* const interstitialPlacement = @"46131668eeee4b1baae193429d42aec0";
 NSString* const rewardPlacement = @"";
 NSString* const bannerPlacement = @"";
 NSString* const mrecPlacement = @"";

@@ -1,0 +1,37 @@
+PODS:
+  - mopub-ios-sdk (5.16.1):
+    - mopub-ios-sdk/MoPubSDK (= 5.16.1)
+  - mopub-ios-sdk/Core (5.16.1)
+  - mopub-ios-sdk/MoPubSDK (5.16.1):
+    - mopub-ios-sdk/Core
+    - mopub-ios-sdk/NativeAds
+  - mopub-ios-sdk/NativeAds (5.16.1):
+    - mopub-ios-sdk/Core
+  - MoPub-Vungle-Adapters (6.9.1.1):
+    - MoPub-Vungle-Adapters/MoPub (= 6.9.1.1)
+    - MoPub-Vungle-Adapters/Network (= 6.9.1.1)
+  - MoPub-Vungle-Adapters/MoPub (6.9.1.1):
+    - mopub-ios-sdk/Core (~> 5.16.1)
+  - MoPub-Vungle-Adapters/Network (6.9.1.1):
+    - mopub-ios-sdk/Core (~> 5.16.1)
+    - VungleSDK-iOS (= 6.9.1)
+  - VungleSDK-iOS (6.9.1)
+
+DEPENDENCIES:
+  - mopub-ios-sdk
+  - MoPub-Vungle-Adapters (= 6.9.1.1)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - mopub-ios-sdk
+    - MoPub-Vungle-Adapters
+    - VungleSDK-iOS
+
+SPEC CHECKSUMS:
+  mopub-ios-sdk: d207b434e6aef9c2f57423512e5eda1edf82930f
+  MoPub-Vungle-Adapters: eeba3ba5abe8f43a86ef41081991b8876672b2e1
+  VungleSDK-iOS: 09abfadbcc04e0748ce33c6bd02282e9961125ba
+
+PODFILE CHECKSUM: ac850c7cb6017b298f8df59ea6a24ae44b368cda
+
+COCOAPODS: 1.10.0
