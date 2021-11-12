@@ -85,27 +85,31 @@
 
 
 - (void)initVungleSDK {
-   [[VungleSDK sharedSDK] performSelector:@selector(setPluginName:version:) withObject:@"mopub" withObject:[[[VungleAdapterConfiguration alloc] init] adapterVersion]];
+ 
    NSError * error = nil;
    // disable banner refresh(must)
    [[VungleSDK sharedSDK] disableBannerRefresh];
    // Optional. To set the user's consent status to opted in. To set opted out, please use VungleConsentDenied
    [[VungleSDK sharedSDK] updateConsentStatus:VungleConsentAccepted consentMessageVersion:@"Some Consent Message Version"];
-   [[VungleSDK sharedSDK] startWithAppId:@"573420e780ab935b37000066" error:&error];
+   [[VungleSDK sharedSDK] startWithAppId:@"607020b57a9a3d53b679bfcf" error:&error];
    [[VungleSDK sharedSDK] setDelegate:self];
 }
 
 #pragma mark - VungleSDKDelegate Methods
+#pragma mark Vungle SDK initialized
 - (void) vungleSDKDidInitialize {
-    MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:rewardPlacement];
+    MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:interstitialPlacement];
     /* Optional for Vungle early init
      NSMutableDictionary *configDictionary = [NSMutableDictionary dictionaryWithDictionary:@{ @"appId" : @"Your_Vungle_App_Id" }];
      [configDictionary setValue:@(50*1024) forKey:@"vngMinSpaceForInit"];
      [configDictionary setValue:@(50*1024) forKey:@"vngMinSpaceForAdLoad"];
      [sdkConfig setNetworkConfiguration:configDictionary forMediationAdapter:@"VungleAdapterConfiguration"];
      */
+    
+
     [[MoPub sharedInstance] initializeSdkWithConfiguration:sdkConfig completion:^{
-        NSLog(@"SDK initialization complete");
+            NSLog(@"SDK initialization complete");
+            // SDK initialization complete. Ready to make ad requests.
     }];
     
     self.interstitial = [MPInterstitialAdController
